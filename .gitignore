@@ -1,0 +1,33 @@
+# macOS / editor noise
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Local environments
+.venv/
+venv/
+
+# Raw/generated data directories
+gse_analysis/
+old/
+observable/data/
+2x2test/tp0U*/
+
+# LaTeX build products
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log
+manuscript/*.out
+manuscript/*Notes.bib
+
+# Large/local spreadsheet workbooks
+results/*.numbers
+results/*.xlsx
+
+# Local literature copies / extracted paper text
+reference/*.pdf
+results/prx*.txt
