@@ -5,6 +5,8 @@
 \usepackage{booktabs}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
 
+\graphicspath{{../results/}{../figures/}{results/}{figures/}}
+
 \newcommand{\tp}{t'}
 \newcommand{\hk}{Hatsugai--Kohmoto}
 \newcommand{\mmhk}{MMHK}
@@ -71,7 +73,7 @@ The local double occupancy is more tightly reproduced.  For $U/t\ge4$, the absol
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\columnwidth]{../results/half_filling_comparison.pdf}
+  \includegraphics[width=\columnwidth]{half_filling_comparison.pdf}
   \caption{
   Half-filled benchmark at $\tp=0$.  Ground-state energy, double occupancy, and magnetic moment are compared with AFQMC and DMET reference values from Ref.~\onlinecite{leblanc2015solutions}.  The \mmhk{} calculation captures the interaction dependence of all three observables; local double occupancy is especially close to the benchmark data for $U/t\ge4$.
   }
@@ -86,7 +88,7 @@ Finite $\tp=-0.25t$ modifies this evolution.  At the same density and interactio
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\columnwidth]{../results/tprime_overlay_comparison.pdf}
+  \includegraphics[width=\columnwidth]{tprime_overlay_comparison.pdf}
   \caption{
   Doped and frustrated cases.  Comparison of $\tp=0$ and $\tp=-0.25t$ for target densities $n=0.8$, $0.875$, and $1.0$.  The finite next-nearest-neighbor hopping suppresses magnetic correlations away from half filling while preserving the strong-coupling reduction of double occupancy.
   }
@@ -103,7 +105,7 @@ Figure~\ref{fig:ls_tp0} shows representative spectral and Luttinger-surface diag
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=0.72\textwidth]{../figures/hftp0.pdf}
+  \includegraphics[width=0.72\textwidth]{hftp0.pdf}
   \caption{
   Spectral function and Luttinger surface for $\tp=0$ at several interaction strengths.  The zero contour of $G(\mathbf{k},0)$ survives as the low-energy spectral weight is suppressed, distinguishing the Luttinger surface from a Fermi surface of poles.
   }
@@ -114,7 +116,7 @@ For $\tp=-0.25t$, the zero surface is no longer constrained to the particle-hole
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=0.72\textwidth]{../figures/hftpn25.pdf}
+  \includegraphics[width=0.72\textwidth]{hftpn25.pdf}
   \caption{
   Spectral function and Luttinger surface for $\tp=-0.25t$.  Next-nearest-neighbor hopping shifts the zero contour away from the particle-hole-symmetric reference while preserving the interpretation of the sign change as a zero of the Green's function rather than a quasiparticle pole.
   }
@@ -136,6 +138,6 @@ We thank [names] for useful discussions.  This work used computational resources
 \end{acknowledgments}
 
 \bibliographystyle{apsrev4-1}
-\bibliography{references}
+\IfFileExists{references.bib}{\bibliography{references}}{\bibliography{manuscript/references}}
 
 \end{document}
