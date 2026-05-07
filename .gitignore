@@ -15,6 +15,15 @@ observable/data/
 2x2test/tp0U*/
 
 # LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*Notes.bib
+/main.pdf
 manuscript/*.aux
 manuscript/*.bbl
 manuscript/*.blg
