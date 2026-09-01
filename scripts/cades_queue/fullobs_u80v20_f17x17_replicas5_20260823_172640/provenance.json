@@ -1,0 +1,132 @@
+{
+  "authorization": "User explicitly requested five more replicas with different seeds on 2026-08-23.",
+  "batch": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_u80v20_f17x17_replicas5_20260823_172640",
+  "build_status": "NOT_BUILT_LOCAL_PACKAGE_ONLY",
+  "created_at": "2026-08-23T17:26:40-04:00",
+  "failure_diagnosis": {
+    "QBASIS_LANCZOS_SEED_in_original_runtime": "inert",
+    "original_maxit": 10000,
+    "original_model_cc_seed": "hardcoded uint32_t seed = 1",
+    "prior_outcomes": {
+      "FAILED": 1,
+      "TIMEOUT": 2
+    },
+    "trace_evidence": "Canonical and three prior replica CG logs are exact prefixes over every shared line; line counts 9683,10000,9596,9679."
+  },
+  "job_name": "F4U80R5",
+  "original_runtime_pins": {
+    "Hubbard_sym_testobs_UV.cc": "f68ecd93e2dee07012d7fda6521fe617775f637fede1da7f3f0cb27a92e6ce73",
+    "Hubbard_sym_testobs_UV.x": "b85cefa08615ff2bffd46690990c68b4d1297de7a8b11046ebd6c1c29bdd8c0b",
+    "libqbasis.so": "be10e2a72679b2214735c1e71f55dfc331e395a41a0866ecde35b090ca21ba85"
+  },
+  "policy": "Five user-authorized convergence-hardened true-seed isolated replicas; batch-local build/output/work/lock/log paths; canonical/shared qbasis/prior replicas read-only; no automatic repair, resubmit, rebalance, cancel, promotion, overwrite, or deletion.",
+  "prior_replica_batch": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_u80v20_f17x17_replicas3_20260823_002730",
+  "prior_replica_job_ids": [
+    "5620075",
+    "5620076",
+    "5620077"
+  ],
+  "prior_replica_job_name": "F4U80R3",
+  "prior_replica_seeds": [
+    502788135,
+    3887639161,
+    1180146145
+  ],
+  "replica_count": 5,
+  "replica_ordinals": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "replica_seeds": [
+    436887014,
+    3276620531,
+    3952085789,
+    2430698334,
+    1012333963
+  ],
+  "resources": {
+    "account": "ccsd",
+    "cpus_per_task": 1,
+    "memory": "100G",
+    "nodes": 1,
+    "partition": "burst",
+    "partition_ceiling": "48:00:00",
+    "tasks": 32,
+    "time_limit": "47:00:00"
+  },
+  "runtime_changes": {
+    "build_isolation": "batch-local only",
+    "build_smoke": "Launch the actual patched solver sequentially with the first two selected seeds in isolated Nup=Ndn=1 sectors and OMP/MKL single-threaded; poll up to 720 s for one exact seed marker plus an allowed nonempty trace stable for three 0.25 s snapshots (or accept a clean natural exit that freezes final marker/trace evidence); if still running, terminate only its owned process group after proof within recorded TERM/KILL bounds; retain hashed stdout/stderr/trace evidence, remove scratch partial obs, and require divergent SHA256 content over the same common prefix line count, not merely different trace lengths.",
+    "maxit": 50000,
+    "qbasis_original_model_sha256": "ffdcbb4d15a64f8e703e81d642edb0036a6e87e1937191c3474e740c1940d3e7",
+    "qbasis_patched_model_sha256": "c7a45062ce4d8b45e60768519276044f748de6d955095a2a1bd828b0d451c510",
+    "seed_parser": "required full-string decimal, overflow-safe range 1..4294967295, logged effective value",
+    "solver_original_source_sha256": "f68ecd93e2dee07012d7fda6521fe617775f637fede1da7f3f0cb27a92e6ce73",
+    "solver_patched_source_sha256": "fcf6ad1f61c294186291afd15ae09fc46551443eab1fbbb1a6ca851fca66521b"
+  },
+  "runtime_pins": "Generated only by build_pins.py into batch-local pinned_solver and bound by BUILT_PIN_SHA256SUMS/BUILD_RECEIPT.json.",
+  "schema": "fig4_u80v20_f17x17_five_additional_true_seed_maxit50000_replicas_v2",
+  "seed_derivation": {
+    "algorithm": "uint32 big-endian first four bytes of SHA256(context + colon + one_based_index)",
+    "context": "HK_fig4_cnn_U80_V20_f17x17_five_replicas_20260823_parent_authorized",
+    "effective_minstd_rand0_states": [
+      436887014,
+      1129136884,
+      1804602142,
+      283214687,
+      1012333963
+    ],
+    "effective_state_modulus": 2147483647,
+    "effective_states_unique_nonzero": true,
+    "indices": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "seed_freshness": {
+    "baseline_inventory_sha256": "261b705ec9ad01e3ef004ecb35b4f893e506c16911aa0a10d345cfad2b3ef625",
+    "baseline_unique_uint32": 911248,
+    "exact_numeric_token_occurrences": 0,
+    "live_read_only_scan_root": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn",
+    "live_scan_bytes": 149249704,
+    "live_scan_errors": 0,
+    "live_scan_regular_files": 3901,
+    "scan_completed_before_package_creation": true
+  },
+  "source_analyzer_sha256": "aec1ad91ce09913a89f8acf21b28d9e58912f430323133088d3d03e4d977c15c",
+  "source_batch": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_25twist_u80v20_fig4_cnn_20260822_213314",
+  "source_index": 7,
+  "source_job_id": "5619905",
+  "source_manifest_sha256": "e5e95fa9b65d312b79f3a6349252a37c9ea60c1ce95df50a3be142b334c97117",
+  "source_seed": 4064600374,
+  "source_twist_sha256": "688132fc91e3decdb83784e71d4a69c9868e1f2ead740d753c2ca7e538b06f4b",
+  "target": {
+    "U": 80,
+    "V": 20,
+    "V_over_U": 0.25,
+    "canonical_result": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/L4x4Nup8Ndn8U80V20tp0f17x17Q0x0_obs.dat",
+    "expected_phase": "boundary",
+    "kx": 17,
+    "ky": 17,
+    "twist_index": 7
+  },
+  "terminal_basis_at_creation": {
+    "canonical_anomalies": 0,
+    "canonical_counts": {
+      "COMPLETE": 24,
+      "FAILED": 1
+    },
+    "canonical_target_exists": false,
+    "prior_replica_anomalies": 0,
+    "prior_replica_counts": {
+      "FAILED": 1,
+      "TIMEOUT": 2
+    }
+  }
+}

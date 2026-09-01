@@ -1,0 +1,7 @@
+# Refined finite-V grid requested by the manuscript upgrade plan.
+# Purpose: resolve the Luttinger-surface scale reversal near the
+# half-filled extended-Hubbard reference boundary V/U = 1/4 for U=20.
+# Copy this file to CADES as UVset.txt (or adapt generate_jobs_G_UV.sh
+# to point to it), then regenerate G-UV templates with the existing
+# kxkyset.txt Gamma-X-M-Gamma path.
+(20,4.5),(20,5),(20,5.5)

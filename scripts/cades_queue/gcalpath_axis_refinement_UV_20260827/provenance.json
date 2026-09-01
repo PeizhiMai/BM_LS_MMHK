@@ -1,0 +1,113 @@
+{
+  "account_assignment": {
+    "current_policy": "all_remaining_pending_moved_in_place_to_ccsd_2026-08-27_running_cnms_untouched",
+    "moved_in_place_total": 279,
+    "original": {
+      "per_set": {
+        "ccsd": 90,
+        "cnms": 30
+      },
+      "policy": "immutable_ordinary_assignment_all_submitted_immediately",
+      "total": {
+        "ccsd": 990,
+        "cnms": 330
+      }
+    },
+    "per_set": {
+      "ccsd": 90,
+      "cnms": 30
+    },
+    "policy": "immutable_ordinary_assignment_all_submitted_immediately",
+    "rebalance_audits": [
+      "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/Gcalpath_axis_refinement_UV_20260827/provenance/cnms_pending_to_ccsd_20260828T024139Z.json",
+      "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/Gcalpath_axis_refinement_UV_20260827/provenance/cnms_pending_to_ccsd_summary_20260828T024139Z.json"
+    ],
+    "rebalance_summary": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/Gcalpath_axis_refinement_UV_20260827/provenance/cnms_pending_to_ccsd_summary_20260828T024139Z.json",
+    "total": {
+      "ccsd": 990,
+      "cnms": 330
+    }
+  },
+  "created_at": "2026-08-27",
+  "expected_raw_files": 2640,
+  "ordinary_jobs": 1320,
+  "pairs_per_set": 120,
+  "parameters": [
+    {
+      "U": 9.0,
+      "V": 0.0,
+      "set_name": "mott_U9_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 10.0,
+      "V": 0.0,
+      "set_name": "mott_U10_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 11.0,
+      "V": 0.0,
+      "set_name": "mott_U11_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 14.0,
+      "V": 0.0,
+      "set_name": "mott_U14_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 16.0,
+      "V": 0.0,
+      "set_name": "mott_U16_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 27.0,
+      "V": 0.0,
+      "set_name": "mott_U27_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 0.0,
+      "V": 2.25,
+      "set_name": "charge_V2p25_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 0.0,
+      "V": 2.5,
+      "set_name": "charge_V2p5_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 0.0,
+      "V": 2.75,
+      "set_name": "charge_V2p75_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 0.0,
+      "V": 3.25,
+      "set_name": "charge_V3p25_tp0",
+      "tp": 0.0
+    },
+    {
+      "U": 0.0,
+      "V": 6.25,
+      "set_name": "charge_V6p25_tp0",
+      "tp": 0.0
+    }
+  ],
+  "purpose": "Refine live Fig. 3d and Fig. 4d sampling at tprime=0",
+  "repair_policy": "exactly_two_concurrent_distinct_globally_unused_seeds_isolated_workdirs_ccsd_first_valid_wins",
+  "resources": {
+    "memory": "100G",
+    "partition": "burst",
+    "tasks": 32,
+    "walltime": "08:00:00"
+  },
+  "sets": 11,
+  "validity": "matching U,V,tp,Q=0,0; positive finite nrm2; finite 999 a and 999 b coefficients in each Gh/Gp file"
+}

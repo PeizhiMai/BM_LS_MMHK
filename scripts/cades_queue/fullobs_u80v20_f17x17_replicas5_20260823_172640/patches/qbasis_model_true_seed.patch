@@ -1,0 +1,36 @@
+--- a/qbasis/src/model.cc
++++ b/qbasis/src/model.cc
+@@ -1,3 +1,5 @@
++#include <cstdint>
++#include <cstdlib>
+ #include <fstream>
+ #include <filesystem>
+ #include <iostream>
+@@ -1139,7 +1141,26 @@
+         }
+ 
+         assert(nev > 0 && nev <= 2 && ncv >= nev - 1 && ncv <= nev);
+-        uint32_t seed   = 1;
++        const char *seed_env = std::getenv("QBASIS_LANCZOS_SEED");
++        if (seed_env == nullptr || *seed_env == '\0') {
++            throw std::invalid_argument("QBASIS_LANCZOS_SEED is required");
++        }
++        uint64_t parsed_seed = 0;
++        for (const unsigned char ch : std::string(seed_env)) {
++            if (ch < static_cast<unsigned char>('0') || ch > static_cast<unsigned char>('9')) {
++                throw std::invalid_argument("QBASIS_LANCZOS_SEED must be a decimal uint32 in [1, 4294967295]");
++            }
++            const uint64_t digit = static_cast<uint64_t>(ch - static_cast<unsigned char>('0'));
++            if (parsed_seed > (4294967295ULL - digit) / 10ULL) {
++                throw std::invalid_argument("QBASIS_LANCZOS_SEED must be a decimal uint32 in [1, 4294967295]");
++            }
++            parsed_seed = parsed_seed * 10ULL + digit;
++        }
++        if (parsed_seed == 0) {
++            throw std::invalid_argument("QBASIS_LANCZOS_SEED must be a decimal uint32 in [1, 4294967295]");
++        }
++        const uint32_t seed = static_cast<uint32_t>(parsed_seed);
++        std::cout << "QBASIS_LANCZOS_SEED = " << seed << std::endl;
+         sec_sym         = sec_sym_;
+         MKL_INT dim     = sec_sym == which_sym::full ? dim_full[sec_mat] :
+                           (sec_sym == which_sym::repr ? dim_repr[sec_mat] : dim_vrnl[sec_mat]);

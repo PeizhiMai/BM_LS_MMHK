@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-07-31",
+  "recorded_at": "2026-07-31 12:38:02 EDT",
+  "plan": "notes/2026-07-31_vonly_tprime_zero_dispersion_plan.md",
+  "source_directory": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/Gcalpath",
+  "source_sha256": "8b79974c3c33c63168142a27b97e9e71f0020541c63f3b427e9840d3681a6ab9",
+  "binary_sha256": "49bc69f4efd88cba17f7d4803cc4d13a05d9d18b57e1fa0aa61e0a028a05d4a8",
+  "setup_sha256": "e21189c2d829c7d5e57f9d1b7899b1c5e64bcf02b66e34b2a748aa1ce550a0fe",
+  "compiler": "g++ (GCC) 12.2.0",
+  "python": "Python 3.11.13",
+  "targets": 360,
+  "expected_raw_files": 720,
+  "ccsd_cap": 40,
+  "cnms_cap": 60,
+  "resources": {
+    "tasks": 32,
+    "memory": "100G",
+    "walltime": "08:00:00",
+    "steps_max": 1000
+  }
+}

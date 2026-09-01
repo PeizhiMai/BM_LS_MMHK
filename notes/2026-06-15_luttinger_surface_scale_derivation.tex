@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+
+\newcommand{\eps}{\epsilon_0({\bf k})}
+\newcommand{\wls}{\omega_{\rm LS}({\bf k})}
+\newcommand{\dd}{\delta_{\bf k}}
+\newcommand{\Ck}{C_{\bf k}}
+\newcommand{\Dk}{D_{\bf k}}
+\newcommand{\Cnn}{C_1}
+
+\title{Strong-coupling origin of the Luttinger-surface scale in the MMHK benchmark}
+\author{Project note}
+\date{June 15, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Conventions and numerical facts}
+
+The extracted Luttinger-surface dispersion is fitted to the nearest-neighbor noninteracting dispersion
+\begin{equation}
+\eps=-2t(\cos k_x+\cos k_y),\qquad t=1,
+\end{equation}
+through
+\begin{equation}
+\wls\simeq a\eps+b .
+\end{equation}
+The present eta=0.05 data give the following asymptotic-looking scales:
+\begin{align}
+  a_{U\text{-only}}(U=40,V=0)&=-1.39286,\\
+  a_{V\text{-only}}(U=0,V=12)&=-1.14265.
+\end{align}
+The purpose of this note is to show why these numbers are close to
+\begin{equation}
+  a_U\to 4\langle{\bf S}_i\cdot{\bf S}_j\rangle_{\rm spin},
+  \qquad
+  a_V\to -\frac87 .
+\end{equation}
+For the periodic $4\times4$ spin-$1/2$ Heisenberg cluster used by the MMHK block,
+exact diagonalization gives
+\begin{equation}
+  E_0^{\rm Heis}=-11.2284832084,
+  \qquad
+  \Cnn=\frac{E_0^{\rm Heis}}{32}=-0.3508901003,
+\end{equation}
+where $32$ is the number of nearest-neighbor bonds.  Hence
+\begin{equation}
+  4\Cnn=-1.4035604011,
+\end{equation}
+which is already very close to the large-$U$ Luttinger-surface scale.
+
+\section{Common two-pole/moment structure}
+
+Inside the Mott or charge gap, the Green function zero is controlled by the cancellation
+between particle-removal and particle-addition contributions.  A useful first-moment form is
+\begin{equation}
+  G({\bf k},\omega)
+  \simeq
+  \frac{w_h({\bf k})}{\omega-E_h({\bf k})}
+  +
+  \frac{w_p({\bf k})}{\omega-E_p({\bf k})},
+\end{equation}
+with $w_h+w_p=1$ for one spin species.  The zero is therefore
+\begin{equation}
+  \omega_0({\bf k})=w_h({\bf k})E_p({\bf k})+w_p({\bf k})E_h({\bf k}).
+\end{equation}
+Writing
+\begin{equation}
+  w_h=\frac12+\dd,
+  \qquad
+  w_p=\frac12-\dd,
+\end{equation}
+and
+\begin{equation}
+  \Ck=\frac{E_p+E_h}{2},
+  \qquad
+  \Dk=E_p-E_h,
+\end{equation}
+one obtains the exact two-pole identity
+\begin{equation}
+  \boxed{\omega_0({\bf k})=\Ck+\dd\Dk.}
+  \label{eq:common-zero}
+\end{equation}
+The two asymptotic scales below differ only in the strong-coupling evaluation of
+$\dd$, $\Dk$, and $\Ck$.
+
+\section{$U$-only limit: spin-background scale}
+
+At half filling and $U\gg t$, the low-energy sector of the Hubbard model maps to the
+nearest-neighbor Heisenberg model with exchange $J=4t^2/U$.  The nearest-neighbor spin
+correlator is
+\begin{equation}
+  \Cnn=\langle {\bf S}_i\cdot{\bf S}_{i+\hat x}\rangle.
+\end{equation}
+A Schrieffer--Wolff expansion gives the nearest-neighbor one-body density matrix, for a fixed
+spin $\sigma$,
+\begin{equation}
+  \langle c^\dagger_{i\sigma}c_{i+\hat x,\sigma}\rangle
+  =\frac{2t}{U}\left(\frac14-\Cnn\right)+O(t^3/U^3).
+\end{equation}
+Fourier transforming this nearest-neighbor expectation value gives
+\begin{equation}
+  n_{{\bf k}\sigma}=\frac12+\frac{2\Cnn-1/2}{U}\eps+O(t^3/U^3),
+\end{equation}
+so that
+\begin{equation}
+  \dd=n_{{\bf k}\sigma}-\frac12
+  =\frac{2\Cnn-1/2}{U}\eps+O(t^3/U^3).
+  \label{eq:delta-u}
+\end{equation}
+The addition--removal separation is $\Dk=U+O(t)$, so the weight-asymmetry contribution to
+Eq.~\eqref{eq:common-zero} is
+\begin{equation}
+  \dd\Dk=(2\Cnn-1/2)\eps+O(t^2/U).
+  \label{eq:deltad-u}
+\end{equation}
+The center of the two first moments is not zero.  Evaluating the first spectral moments, or
+equivalently the $a_0$ Lanczos coefficients of the particle and hole continued fractions,
+gives
+\begin{equation}
+  \Ck=(1/2+2\Cnn)\eps+O(t^2/U).
+  \label{eq:center-u}
+\end{equation}
+Combining Eqs.~\eqref{eq:common-zero}, \eqref{eq:deltad-u}, and \eqref{eq:center-u},
+\begin{equation}
+  \boxed{
+  \wls^{(U)}
+  =\left[(1/2+2\Cnn)+(2\Cnn-1/2)\right]\eps
+  =4\Cnn\eps+O(t^2/U).
+  }
+\end{equation}
+For the present $4\times4$ MMHK spin background,
+\begin{equation}
+  \boxed{\wls^{(U)}\simeq -1.40356\,\eps,}
+\end{equation}
+consistent with the $U=40$ extracted scale $-1.39286$.
+
+\begin{table}[h]
+\centering
+\caption{Numerical decomposition from the raw Lanczos files.  The first-moment zero uses the
+$a_0$ coefficients and weights only.}
+\begin{tabular}{cccc}
+\toprule
+$U$ & actual root scale & first-moment zero scale & $4\Cnn$ \\
+\midrule
+8  & $-1.33054$ & $-1.43530$ & $-1.40356$ \\
+12 & $-1.30292$ & $-1.41479$ & $-1.40356$ \\
+20 & $-1.36254$ & $-1.40559$ & $-1.40356$ \\
+40 & $-1.39286$ & $-1.40368$ & $-1.40356$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{$V$-only limit: charge-defect scale}
+
+For $U=0$ and $V\gg t$, the half-filled ground state is a checkerboard charge state: one
+sublattice is doubly occupied and the other is empty.  A nearest-neighbor hop from a doubly
+occupied site to an empty site creates a charge defect.  The defect energy denominator is
+\begin{equation}
+  \Delta_{\rm hop}=3(2V)+1V=7V.
+\end{equation}
+The three $2V$ terms are the interactions of the moved electron with the other occupied
+nearest neighbors of the target site, and the remaining $V$ is the bond back to the source.
+Thus the nearest-neighbor one-body density matrix has the leading amplitude
+\begin{equation}
+  \langle c^\dagger_{i\sigma}c_{i+\hat x,\sigma}\rangle
+  =\frac{t}{7V}+O(t^3/V^3),
+\end{equation}
+and hence
+\begin{equation}
+  \dd=n_{{\bf k}\sigma}-\frac12
+  =-\frac{1}{7V}\eps+O(t^3/V^3).
+  \label{eq:delta-v}
+\end{equation}
+The particle-hole symmetric chemical potential is $\mu_{\rm ph}=4V$.  The dominant addition
+and removal poles therefore lie near $\pm4V$, so
+\begin{equation}
+  \Dk=8V+O(t),
+  \qquad
+  \Ck=O(t^2/V).
+  \label{eq:gap-v}
+\end{equation}
+Using Eq.~\eqref{eq:common-zero},
+\begin{equation}
+  \boxed{
+  \wls^{(V)}
+  =\dd\Dk+\Ck
+  =-\frac{1}{7V}\eps\,(8V)+O(t^2/V)
+  =-\frac87\eps+O(t^2/V).
+  }
+\end{equation}
+This agrees with the extracted $U=0$ scales:
+\begin{equation}
+  a(V=4)=-1.14105,
+  \qquad
+  a(V=8)=-1.14240,
+  \qquad
+  a(V=12)=-1.14265,
+\end{equation}
+which converge to $-8/7=-1.142857\ldots$.
+
+\section{Thermodynamic and larger-cluster estimates}
+
+\subsection{Spin background for the $U$-only limit}
+
+The $4\times4$ value $4\Cnn=-1.40356$ is a finite-block value.  In the thermodynamic
+square-lattice spin-$1/2$ Heisenberg antiferromagnet, high-precision stochastic-series-expansion
+QMC gives an energy density
+\begin{equation}
+  e_0=-0.669441857(7) \quad (J=1)
+\end{equation}
+for the Hamiltonian $H=J\sum_{\langle ij\rangle}{\bf S}_i\cdot{\bf S}_j$~\cite{sandvik2026highprecision}.
+Since the square lattice has two bonds per site,
+\begin{equation}
+  \Cnn^{\infty}=e_0/2=-0.3347209285(35),
+  \qquad
+  4\Cnn^{\infty}=2e_0=-1.338883714(14).
+\end{equation}
+Thus a thermodynamic-limit spin background would predict a smaller large-$U$ scale,
+approximately $-1.339$, whereas the present MMHK $4\times4$ block naturally gives the stronger
+finite-cluster value $-1.404$.  This distinction is important: the observed $-1.4$ is not a
+universal thermodynamic Hubbard number, but rather the nearest-neighbor spin correlation of the
+finite MMHK block entering the strong-coupling zero.
+
+\subsection{Charge background for the $V$-only limit}
+
+There is an analogous thermodynamic estimate for the $V$-only result, but it is simpler than the
+spin case because the $t=0$ charge background is classical.  On any even square lattice that
+supports checkerboard order, the strong-coupling ground state has
+\begin{equation}
+  n_A=2,\qquad n_B=0,
+\end{equation}
+up to the two choices of occupied sublattice.  The leading hopping process is local: one electron
+moves from a doubly occupied $A$ site to a neighboring empty $B$ site.  For square-lattice
+coordination $z=4$, the defect denominator is
+\begin{equation}
+  \Delta_{\rm hop}=(2z-1)V=7V.
+\end{equation}
+The particle-hole separation is instead fixed by the particle-hole symmetric chemical potential,
+\begin{equation}
+  \mu_{\rm ph}=zV,
+  \qquad
+  \Dk\simeq 2zV=8V.
+\end{equation}
+Thus, for a general hypercubic bipartite lattice with coordination $z$, the same derivation gives
+\begin{equation}
+  \dd\simeq -\frac{1}{(2z-1)V}\eps,
+  \qquad
+  \wls^{(V)}\simeq -\frac{2z}{2z-1}\eps.
+\end{equation}
+For the square lattice,
+\begin{equation}
+  \boxed{a_V^{\infty}=-\frac{8}{7}.}
+\end{equation}
+Unlike the $U$-only coefficient, this leading $V$-only coefficient is not controlled by a
+nontrivial finite-size spin correlation.  It is a local charge-defect denominator and therefore is
+the same for the $4\times4$ block and for the thermodynamic checkerboard state, up to higher-order
+virtual hopping corrections $O(t^2/V^2)$ and possible boundary effects on clusters that do not
+support perfect checkerboard order.  The observed convergence
+\begin{equation}
+  -1.14105\;(V=4),\quad -1.14240\;(V=8),\quad -1.14265\;(V=12)
+  \longrightarrow -1.142857\ldots
+\end{equation}
+is exactly the expected approach to this local thermodynamic value.
+
+\begin{thebibliography}{9}
+\bibitem{sandvik2026highprecision}
+A.~W. Sandvik, ``High-precision ground state parameters of the two-dimensional spin-1/2
+Heisenberg model on the square lattice,'' arXiv:2601.20189 (2026).
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,396 @@
+
+\documentclass[10pt]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,graphicx,xcolor,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\graphicspath{{../figures/fullobs/}}
+\definecolor{mottblue}{HTML}{335F8D}
+\definecolor{chargeorange}{HTML}{C56F2D}
+\definecolor{softgray}{HTML}{F4F5F7}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{U=40 full-observable scan}
+\rhead{Technical report}
+\cfoot{\thepage}
+\setlength{\headheight}{13pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=2pt}
+\newcommand{\vk}{\mathbf{k}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Static observables expose the Mott--charge reorganization at $U=40$\par}
+\vspace{0.35em}
+{\large All-momentum analysis of the $V$-extended MMHK calculation\par}
+\vspace{0.4em}
+{\small Data snapshot: 18 July 2026, 16:50 EDT}
+\end{center}
+
+\vspace{0.5em}
+\colorbox{softgray}{\parbox{0.965\linewidth}{
+\textbf{Technical summary.}
+The analysis uses 10332 validated outputs out of 10332 requested
+fixed-$Q=(0,0)$ calculations (100.000\% complete) at $U=40$, $t'=0$.
+Every real-space charge and spin diagnostic changes branch between $V=10$ and $V=10.1$:
+the on-site double occupation rises from 0.005155 to 0.495789, the checkerboard
+order proxy rises from 0.001297 to 0.984252, and
+$S^{zz}(\pi,\pi)$ collapses from 1.455514 to 0.004184.
+The momentum distribution remains almost perfectly linear in the bare dispersion
+($R^2\ge 0.999713$), but its slope changes from the Mott denominator $U-V$ to the
+charge denominator $7V-U$.  A local Hellmann--Feynman branch interpolation gives
+$V_c\simeq 10.0153$, or $V_c/U\simeq 0.250384$, while the directly sampled statement
+is the directly resolved bracket $10<V_c<10.1$.  The static observables therefore provide an
+independent, sharply resolved counterpart to the Green-function-zero reorganization.}}
+
+\section{A collective branch change occurs between $V=10$ and $V=10.1$}
+
+The scan separates into two internally uniform regimes.  On the Mott side through
+$V=10$, $D_i$ remains small, $\langle n_i n_j\rangle_{\rm NN}$ remains close to one,
+and antiferromagnetic correlations remain strong.  Already at $V=10.1$, the same calculation
+has instead entered an almost classical checkerboard state: $D_i\approx 1/2$,
+$\langle n_i n_j\rangle_{\rm NN}\approx0$, and $m_{\rm CDW}^2\approx1$.
+The numerical changes across the newly resolved $V=10$ to $10.1$ interval are
+\begin{align*}
+D_i &: 0.005155 \rightarrow 0.495789, &
+\langle n_i n_j\rangle_{\rm NN} &: 0.997420 \rightarrow 0.014702,\\
+C_1 &: -0.345285 \rightarrow -0.001569, &
+S^{zz}(\pi,\pi) &: 1.455514 \rightarrow 0.004184,\\
+m_{\rm CDW}^2 &: 0.001297 \rightarrow 0.984252, &
+K/N &: -0.312914 \rightarrow -0.258259.
+\end{align*}
+The momentum-to-momentum standard deviations of the local charge observables are
+only $10^{-5}$ or smaller at the two boundary points.  Thus the switch is not caused
+by a small subset of twist points; all sampled blocks select the same side at each
+sampled $V$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{fullobs_static_scan_U40.pdf}
+\caption{Twist-averaged static observables versus $V/U$.  Blue and orange backgrounds
+mark the Mott- and charge-dominated sides of the atomic scale $V/U=1/4$.
+The added points resolve the abrupt and simultaneous charge, spin, kinetic, and momentum
+changes between the last Mott point ($V=10$) and the first charge point ($V=10.1$).}
+\end{figure}
+
+\section{$n(\vk)$ measures virtual hopping, not a generic fluctuation amplitude}
+
+The full momentum maps show a simple but informative result.  For every $V$,
+\begin{equation}
+n(\vk)=1+a\,\epsilon_{\vk}+\delta n_{\vk},\qquad
+\epsilon_{\vk}=-2(\cos k_x+\cos k_y),
+\end{equation}
+with $R^2\ge 0.999713$ and a very small nonlinear remainder.  Consequently the
+momentum contrast $\sigma_{\vk}[n]$ and kinetic energy are not independent:
+for the present normalization, $\sigma_{\vk}[n]=2|a|$ and $K/N=4a$ to the numerical
+precision of the complete grids.
+
+The momentum differentiation grows by 31.7\% from
+$\sigma_{\vk}[n]=0.118794$ at $V=0$ to 0.156479 at $V=10$.
+It immediately falls by -17.5\% to 0.129136 at $V=10.1$ and decreases further to
+0.039956 at $V=20$.  Thus $n(\vk)$ is a clean measure of the virtual-hopping
+amplitude and band-memory retained by the insulating state.  It is largest immediately
+on the Mott side because the virtual charge denominator $U-V$ is smallest there,
+then becomes progressively flatter in the charge state as $7V-U$ grows.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\linewidth]{fullobs_nk_maps_U40.pdf}
+\caption{Reconstructed $n(\vk)$ maps on $0\le k_x,k_y\le\pi$.  The Mott-side
+dispersion strengthens toward $V/U=1/4$, drops immediately on the charge side,
+and then flattens continuously.  All displayed maps are complete; no interpolation was used.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\linewidth]{fullobs_nk_vs_epsilon_U40.pdf}
+\caption{The measured momentum occupation versus the bare dispersion.  Orange lines
+are weighted fits constrained by particle--hole symmetry to pass through
+$n=1$ at $\epsilon_{\vk}=0$.  The near-unity $R^2$ values demonstrate that a
+single interaction-dependent virtual-hopping scale describes each full map.}
+\end{figure}
+
+The separately measured momentum-orbital double occupation sharpens the interpretation.
+Its average drops from $D_{\vk}=0.286465$ at $V=10$ to 0.252962 at $V=11$,
+while the spin covariance
+$D_{\vk}-[n(\vk)/2]^2$ collapses from 3.034e-02 to 8.032e-05.
+However, the intrinsic number variance
+$\mathrm{Var}(n_{\vk})=n(\vk)+2D_{\vk}-n(\vk)^2$ changes from 0.548445 to
+0.494396 and approaches 0.499227 in the charge limit, rather than vanishing.
+A flat $n(\vk)$ therefore means loss of momentum differentiation; it does not by
+itself mean that the symmetry-preserving many-body state has zero occupation-number
+variance.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\linewidth]{fullobs_Dk_maps_U40.pdf}
+\caption{Momentum-orbital double occupation
+$D_{\vk}=\langle n_{\vk\uparrow}n_{\vk\downarrow}\rangle$.  The charge side tends
+toward $D_{\vk}=1/4$, causing the up--down momentum covariance to vanish even while
+the real-space double occupation tends to $1/2$.}
+\end{figure}
+
+\section{Two virtual charge denominators explain the measured trends}
+
+The same nearest-neighbor hop has different excitation energies in the two atomic
+backgrounds.  In a singly occupied Mott background it creates a neighboring
+doublon--holon pair with
+\begin{equation}
+\Delta_M=U-V.
+\end{equation}
+In the checkerboard doublon--holon background it creates two adjacent singly occupied
+sites.  The changed site touches seven interaction bonds, giving
+\begin{equation}
+\Delta_C=7V-U.
+\end{equation}
+Second-order perturbation theory at $t=1$ then gives the following parameter-free
+forms once the measured nearest-neighbor spin correlation is inserted on the Mott side:
+\begin{align}
+\frac{E_M}{N} &\simeq 2V-\frac{8(1/4-C_1)}{\Delta_M}, &
+\frac{K_M}{N} &\simeq -\frac{16(1/4-C_1)}{\Delta_M},\\
+n_M(\vk) &\simeq 1-\frac{4(1/4-C_1)}{\Delta_M}\epsilon_{\vk}, &
+D_M &\simeq \frac{8(1/4-C_1)}{\Delta_M^2},\\
+\langle n_i n_j\rangle_M &\simeq 1-\frac{4(1/4-C_1)}{\Delta_M^2},\nonumber
+\end{align}
+and
+\begin{align}
+\frac{E_C}{N} &\simeq \frac{U}{2}-\frac{4}{\Delta_C}, &
+\frac{K_C}{N} &\simeq -\frac{8}{\Delta_C},\\
+n_C(\vk) &\simeq 1-\frac{2}{\Delta_C}\epsilon_{\vk}, &
+D_C &\simeq \frac12-\frac{4}{\Delta_C^2},\\
+\langle n_i n_j\rangle_C &\simeq \frac{14}{\Delta_C^2}.\nonumber
+\end{align}
+Across all applicable points, the $n(\vk)$ slope differs from these formulas by at
+most 1.44\% on the Mott side and 0.89\% on the
+charge side.  The largest Mott-side error in $D_i$ is only 2.58\%.
+This agreement explains both why momentum differentiation grows toward the boundary
+from the Mott side and why it decreases monotonically after the branch switch.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{fullobs_strong_coupling_validation_U40.pdf}
+\caption{Measured energies, $n(\vk)$ slopes, kinetic energies, and local charge
+probabilities compared with the two strong-coupling rules.  Each asymptotic rule is
+shown only on its corresponding side.  The agreement is quantitative even for the
+points adjacent to the branch change.}
+\end{figure}
+
+The exact Hellmann--Feynman relation for these outputs is
+\begin{equation}
+\frac{\partial(E_0/N)}{\partial V}=2\langle n_i n_j\rangle_{\rm NN}.
+\end{equation}
+Approximating each branch by its local tangent at $V=10$ and 11 and integrating over
+the unit interval locates their crossing at $V_c\simeq 10.0153$,
+$V_c/U\simeq 0.250384$.  The estimate shows that the small kinetic correction
+barely shifts the atomic value.  It is nevertheless an interpolation; the direct
+calculation establishes only the interval $10<V_c<11$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{fullobs_transition_diagnostics_U40.pdf}
+\caption{Left: the energy secants compared with the Hellmann--Feynman derivative.
+The slope discontinuity identifies a branch crossing.  Right: order diagnostics on
+a logarithmic scale, displaying the simultaneous loss of spin response and onset of
+checkerboard charge order.}
+\end{figure}
+
+\section{Scope, definitions, and aggregation}
+
+The calculation fixes $N_\uparrow=N_\downarrow=8$, $U=40$, $t=1$, $t'=0$, and
+$Q=(0,0)$ at a $4\times4$ momentum-mixing resolution.  For each interaction pair,
+the Peierls/twist momentum is sampled at
+$f_{x,y}=k_{x,y}\pi/40+10^{-5}$ with $0\le k_x\le k_y\le40$.
+The stored wedge is reflected under $x\leftrightarrow y$ to reconstruct the square;
+off-diagonal rows have symmetry weight two.  Reported momentum averages additionally
+use half weight at the $0$ and $\pi$ endpoints, i.e. two-dimensional trapezoidal
+quadrature.  Missing rows are not imputed; each mean is normalized by the observed
+quadrature weight.
+
+The principal observables are:
+\begin{itemize}
+\item $D_i=\langle n_{i\uparrow}n_{i\downarrow}\rangle$ and
+$D_{\vk}=\langle n_{\vk\uparrow}n_{\vk\downarrow}\rangle$;
+\item $S^{zz}(\pi,\pi)=N^{-1}\sum_{ij}(-1)^{i-j}\langle S_i^zS_j^z\rangle$ and
+$S_c(\pi,\pi)=N^{-1}\sum_{ij}(-1)^{i-j}\langle(n_i-1)(n_j-1)\rangle$;
+\item $m_{\rm CDW}^2=S_c(\pi,\pi)/N$, the nearest-neighbor spin correlation $C_1$,
+the nearest-neighbor density product, and kinetic energy per site;
+\item $n(\vk)$ at $q=(0,0)$ of each $f$-twisted block, identified with physical
+momentum $\vk=f$ in this construction.
+\end{itemize}
+The output field called \texttt{Gap} is identically zero because only one eigenpair
+was requested.  It is metadata, not a charge, spin, or sector gap, and is excluded
+from all physical conclusions.  The next-nearest-neighbor kinetic contribution is
+also identically zero because $t'=0$.
+
+\section{Numerical validation and incomplete-row sensitivity}
+
+Every downloaded file is marked \texttt{COMPLETE}, matches its SHA-256 manifest,
+and has a unique $(U,V,k_x,k_y)$ key.  Several identities provide independent checks:
+\begin{align*}
+E_0/N &= K/N+UD_i+2V\langle n_i n_j\rangle_{\rm NN},\\
+\langle\delta n_i\delta n_j\rangle_{\rm NN}
+&=\langle n_i n_j\rangle_{\rm NN}-1,\\
+K&=K_{\rm NN}+K_{\rm NNN},\qquad
+m_{\rm CDW}^2=S_c(\pi,\pi)/N.
+\end{align*}
+The largest energy-identity residual is 2.17e-10; the other three identities
+hold to machine precision.  Particle--hole symmetry gives
+$n(\vk)+n(\pi-\vk)=2$ with maximum residual below $7\times10^{-6}$.
+
+All 12 interaction sets are complete: every set contains 861 wedge rows and the full
+quadrature weight.  The dataset therefore requires neither interpolation nor a
+missing-row correction.
+
+\begin{table}[htbp]
+\centering
+\caption{Downloaded data coverage.  Quadrature coverage includes endpoint weights.}
+\begin{tabular}{rrrr}
+\toprule
+$V$ & wedge rows & row coverage & quadrature coverage\\
+\midrule
+0 & 861 & 100.000\% & 100.000\% \\
+4 & 861 & 100.000\% & 100.000\% \\
+8 & 861 & 100.000\% & 100.000\% \\
+9 & 861 & 100.000\% & 100.000\% \\
+10 & 861 & 100.000\% & 100.000\% \\
+10 & 861 & 100.000\% & 100.000\% \\
+10 & 861 & 100.000\% & 100.000\% \\
+10 & 861 & 100.000\% & 100.000\% \\
+11 & 861 & 100.000\% & 100.000\% \\
+12 & 861 & 100.000\% & 100.000\% \\
+16 & 861 & 100.000\% & 100.000\% \\
+20 & 861 & 100.000\% & 100.000\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Limitations and recommended next calculations}
+
+\begin{itemize}
+\item The refined interaction resolution brackets the switch between $V=10$ and
+$10.1$.  The value $V_c\simeq 10.0153$ is a local branch interpolation, not a separately
+computed transition point.
+\item The scan fixes $U=40$ and $Q=(0,0)$.  It establishes the strong-coupling
+reorganization within the present momentum-mixing construction but does not by
+itself provide thermodynamic scaling in mixing resolution or an unrestricted
+momentum-sector comparison.
+\item $n(\vk)$ contrast is an excellent virtual-hopping diagnostic, but it should be
+called momentum differentiation rather than an undifferentiated measure of quantum
+fluctuation.  The separately derived number variance remains finite in the charge
+state.
+\end{itemize}
+
+The most informative next run, if still finer localization is needed, is a narrow
+fixed-$U=40$ grid at $V=10.01,10.02,$ and $10.05$.  A second priority
+is repeating a minimal set on both sides at a different large $U$ to test whether the
+width and location collapse in $V/U$.  For the manuscript, the immediate next analysis
+is to compare the measured $n(\vk)$ slope with the Green-function-zero scale at the
+same $(U,V)$ points; the two observables are controlled by the same virtual charge
+denominators and may provide a unified interpretation.
+
+\section*{Further questions}
+\begin{itemize}
+\item Does the zero-dispersion scale inherit the same $U-V$ and $7V-U$ denominators
+seen directly in $n(\vk)$ and $K$?
+\item Does the branch switch remain as sharp when the momentum-mixing resolution or
+total-momentum sector is varied?
+\item Can the small nonlinear remainder $\delta n_{\vk}$ isolate higher-order spin
+or charge correlations beyond the leading strong-coupling rules?
+\end{itemize}
+
+\section*{Reproducibility artifacts}
+The frozen raw snapshot is
+\path{/Users/cosdis/Desktop/projects/HK_orbital_cluster/benchmark/data/fullobs/U40_all_twist_20260718_165039}.  The parser, validation, and figure workflow is
+\path{scripts/analyze_fullobs_u40_scan.py}; the report generator is
+\path{scripts/generate_fullobs_u40_report.py}.  Machine-readable row data, long-form
+observable statistics, wide summaries, the observable dictionary, and validation
+JSON are stored under \path{results/} with tag \texttt{20260718\_165039}.
+
+\appendix
+\section{Complete numerical summaries}
+
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Energy, kinetic, and nearest-neighbor observables.}
+\begin{tabular}{rrrrrrr}
+\toprule
+$V/U$ & $E_0/N$ & $K/N$ & $D_i$ & $\langle n_i n_j\rangle$ &
+$\langle\delta n_i\delta n_j\rangle$ & $C_1$\\
+\midrule
+0.000 & -0.11948 & -0.237576 & 0.002952 & 0.998534 & -0.001466 & -0.347679 \\
+0.100 & 7.86753 & -0.262878 & 0.003620 & 0.998200 & -0.001800 & -0.346953 \\
+0.200 & 15.85136 & -0.294202 & 0.004547 & 0.997731 & -0.002269 & -0.345946 \\
+0.225 & 17.84668 & -0.303258 & 0.004836 & 0.997584 & -0.002416 & -0.345631 \\
+0.250 & 19.84169 & -0.312914 & 0.005155 & 0.997420 & -0.002580 & -0.345285 \\
+0.253 & 19.87029 & -0.258259 & 0.495789 & 0.014702 & -0.985298 & -0.001569 \\
+0.255 & 19.87317 & -0.252567 & 0.495975 & 0.014055 & -0.985945 & -0.001500 \\
+0.260 & 19.87855 & -0.241909 & 0.496311 & 0.012885 & -0.987115 & -0.001376 \\
+0.275 & 19.89226 & -0.214738 & 0.497100 & 0.010137 & -0.989863 & -0.001083 \\
+0.300 & 19.90933 & -0.180882 & 0.497947 & 0.007181 & -0.992819 & -0.000768 \\
+0.400 & 19.94450 & -0.110879 & 0.499231 & 0.002692 & -0.997308 & -0.000288 \\
+0.500 & 19.96002 & -0.079912 & 0.499601 & 0.001398 & -0.998602 & -0.000150 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Spin and charge-order observables.}
+\begin{tabular}{rrrrrr}
+\toprule
+$V/U$ & $S^{zz}(\pi,\pi)$ & $S_c(\pi,\pi)$ & $m_{\rm CDW}^2$ & $D_i$ &
+$\langle n_i n_j\rangle$\\
+\midrule
+0.000 & 1.464837 & 0.011728 & 0.000733 & 0.002952 & 0.998534 \\
+0.100 & 1.462082 & 0.014423 & 0.000901 & 0.003620 & 0.998200 \\
+0.200 & 1.458158 & 0.018217 & 0.001139 & 0.004547 & 0.997731 \\
+0.225 & 1.456908 & 0.019419 & 0.001214 & 0.004836 & 0.997584 \\
+0.250 & 1.455514 & 0.020758 & 0.001297 & 0.005155 & 0.997420 \\
+0.253 & 0.004184 & 15.748025 & 0.984252 & 0.495789 & 0.014702 \\
+0.255 & 0.004001 & 15.759106 & 0.984944 & 0.495975 & 0.014055 \\
+0.260 & 0.003668 & 15.779165 & 0.986198 & 0.496311 & 0.012885 \\
+0.275 & 0.002888 & 15.826261 & 0.989141 & 0.497100 & 0.010137 \\
+0.300 & 0.002047 & 15.876917 & 0.992307 & 0.497947 & 0.007181 \\
+0.400 & 0.000768 & 15.953847 & 0.997115 & 0.499231 & 0.002692 \\
+0.500 & 0.000399 & 15.976040 & 0.998502 & 0.499601 & 0.001398 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Momentum observables and fitted band-memory scale.  The standard deviation
+is over momentum, not a sampling error.}
+\begin{tabular}{rrrrrrrr}
+\toprule
+$V/U$ & $\langle n\rangle$ & $\sigma_{\vk}[n]$ & $\langle D_{\vk}\rangle$ &
+$\langle\mathrm{Var}(n_{\vk})\rangle$ & $\langle\mathrm{Cov}_{\uparrow\downarrow}\rangle$ & $a$ & $R^2$\\
+\midrule
+0.000 & 0.9999985 & 0.118794 & 0.284419 & 0.554727 & 3.09e-02 & -0.059394 & 0.999889 \\
+0.100 & 0.9999983 & 0.131449 & 0.285053 & 0.552830 & 3.07e-02 & -0.065719 & 0.999848 \\
+0.200 & 0.9999981 & 0.147118 & 0.285913 & 0.550184 & 3.05e-02 & -0.073551 & 0.999775 \\
+0.225 & 0.9999981 & 0.151648 & 0.286176 & 0.549357 & 3.04e-02 & -0.075815 & 0.999747 \\
+0.250 & 0.9999980 & 0.156479 & 0.286465 & 0.548445 & 3.03e-02 & -0.078228 & 0.999713 \\
+0.253 & 0.9999984 & 0.129136 & 0.254294 & 0.491913 & 1.26e-04 & -0.064565 & 0.999904 \\
+0.255 & 0.9999984 & 0.126289 & 0.254105 & 0.492263 & 1.19e-04 & -0.063142 & 0.999913 \\
+0.260 & 0.9999985 & 0.120959 & 0.253763 & 0.492897 & 1.06e-04 & -0.060477 & 0.999927 \\
+0.275 & 0.9999986 & 0.107371 & 0.252962 & 0.494396 & 8.03e-05 & -0.053684 & 0.999955 \\
+0.300 & 0.9999989 & 0.090442 & 0.252100 & 0.496021 & 5.56e-05 & -0.045221 & 0.999978 \\
+0.400 & 0.9999993 & 0.055440 & 0.250790 & 0.498508 & 2.22e-05 & -0.027720 & 0.999997 \\
+0.500 & 0.9999995 & 0.039956 & 0.250411 & 0.499227 & 1.24e-05 & -0.019978 & 0.999999 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\linewidth]{fullobs_varnk_maps_U40.pdf}
+\caption{Derived intrinsic momentum-orbital number variance.  Its finite charge-side
+limit distinguishes occupation-number variance from the flattening of the mean
+momentum distribution.  Gray cells are unavailable raw rows.}
+\end{figure}
+
+\end{document}

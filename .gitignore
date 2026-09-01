@@ -1,18 +1,65 @@
-# macOS / editor noise
+# macOS / editor / agent noise
 .DS_Store
+._*
 .ipynb_checkpoints/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
 __pycache__/
 *.py[cod]
+/.codex_tmp/
+/AGENTS.md
 
 # Local environments
 .venv/
 venv/
 
-# Raw/generated data directories
-gse_analysis/
-old/
-observable/data/
-2x2test/tp0U*/
+# Compiled programs and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.x
+
+# Raw data, scratch space, downloaded literature, and generated products
+/data/
+/tmp/
+/output/
+/old/
+/archive/
+/arXiv_submission/
+/presentations/
+/references/
+/gse_analysis/
+/observable/data/
+/2x2test/tp0U*/
+/figures/
+/L*.dat
+/log_*.txt
+
+# Generated analysis results.  Existing historical files already tracked by
+# Git remain tracked; source-like helpers and the two current axis-refinement
+# audit files are retained explicitly.
+/results/*
+!/results/README.md
+!/results/*.py
+!/results/*.sh
+!/results/gcalpath_axis_refinement_coverage_20260828.csv
+!/results/gcalpath_axis_refinement_provenance_20260828.json
+!/results/additional2_zero_dispersion_scale_fits_eta0p05.csv
+!/results/transition_brackets_combined_U2_U40.csv
+!/results/full_861_twist_final_bracket_validation.csv
+
+# Generated queue state and deterministic runtime tables.  Batch setup/monitor
+# code, documentation, contracts, provenance JSON, patches, and checksums remain
+# versioned; the setup scripts recreate the TSV inputs and ledgers.
+/scripts/cades_queue/**/*.tsv
+/scripts/cades_queue/**/known_uint32_inventory.txt
+/scripts/cades_queue/**/jobids*.txt
+/scripts/cades_queue/**/rebalance/
+
+# Generated internal-test artifacts
+/internal_tests/**/outputs/
 
 # LaTeX build products
 *.aux
@@ -22,21 +69,33 @@ observable/data/
 *.fls
 *.log
 *.out
+*.synctex.gz
 *Notes.bib
 /main.pdf
-manuscript/*.aux
-manuscript/*.bbl
-manuscript/*.blg
-manuscript/*.fdb_latexmk
-manuscript/*.fls
-manuscript/*.log
-manuscript/*.out
-manuscript/*Notes.bib
+/manuscript/archive/
+/manuscript/build*/
+/manuscript/local_only/
+/manuscript/qa/
+/manuscript/*.pdf
+/manuscript/*.zip
+/manuscript/*.toc
+/manuscript/main_*.tex
+/manuscript/supplement_*.tex
+/manuscript/significance_statement_*.tex
+/manuscript/referee_backup_*.tex
+/notes/*.pdf
+/reports/*.pdf
 
 # Large/local spreadsheet workbooks
-results/*.numbers
-results/*.xlsx
+*.numbers
+*.xlsx
 
 # Local literature copies / extracted paper text
-reference/*.pdf
-results/prx*.txt
+/reference/*.pdf
+/results/prx*.txt
+
+# Accidental shell/Slurm scratch files at the repository root
+/[0-9][0-9][0-9][0-9][0-9][0-9][0-9]
+/,*
+/.join(rec*
+/untitled folder*

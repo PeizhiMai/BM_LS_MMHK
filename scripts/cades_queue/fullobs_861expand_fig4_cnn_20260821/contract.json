@@ -1,0 +1,107 @@
+{
+  "batch_name": "fullobs_861expand_fig4_cnn_20260821",
+  "counts": {
+    "cases": 12,
+    "combined_total": 10332,
+    "complement_per_case": 836,
+    "expansion_total": 10032,
+    "full_wedge_per_case": 861,
+    "reused_per_case": 25,
+    "reused_total": 300
+  },
+  "decision_gate": {
+    "absolute_propagated_s_tolerance": 0.0005,
+    "absolute_tolerance_basis": "half of a 0.001 dimensionless slope reporting/figure increment",
+    "algorithm": "fig4_cnn_25_to_861_quadrature_v2",
+    "calibration_safety_factor": 5.0,
+    "eq10_residual_used_for_decision": false,
+    "exact_u40_calibration": {
+      "max_U40_panel_spread": 5.229141656709624e-05,
+      "max_abs_C_NN_panel_minus_full861": 2.6920934537155716e-07,
+      "max_abs_U40_symmetry_weighted_minus_primary": 1.450012748316354e-06,
+      "max_abs_bias_to_panel_spread_ratio": 0.008825660518580818,
+      "max_abs_bias_to_symmetry_diagnostic_ratio": 0.2683572051938072
+    },
+    "gz_curve_fit_rmse_used_for_decision": false,
+    "materialization_rederives_target_metrics_from_exact_300_raw_bytes": true,
+    "roughness_exit_multiplier": 4.0,
+    "symmetry_diagnostic_exit_multiplier": 4.0
+  },
+  "full861_analysis": {
+    "C_NN_mean_estimator": "861-point wedge with exchange and trapezoidal endpoint weights (weight 1600)",
+    "C_NN_spread_diagnostic": "quadrature-weighted population standard deviation using the same weight 1600",
+    "idempotent_add_only_outputs": true,
+    "provenance_json_required": true,
+    "remote_local_independent_agreement_required_by_finalizer": true
+  },
+  "handoff": {
+    "dedicated_two_hour_heartbeat_installed_only_after_materialization": true,
+    "expansion_manifest_sha256": "53fc88369d637916e5f33a0511f45ddeb97e60e72ed3a0a173bde03b5edc0b31",
+    "finalizer_requires_no_claims_and_zero_exact_name_activity_pre_and_post_transfer": true,
+    "immutable_snapshot_name": "fullobs_861twist_fig4_cnn_20260821",
+    "package_and_certificate_not_deployed_before_real_approval": true,
+    "standing_user_authorization_conditioned_on_valid_approve_certificate": true
+  },
+  "hashes": {
+    "audit_status": "bc2df46d66ca8bb6ef7df4b366cedfbb1d177585b6bc64fd51e8f2cba84f887a",
+    "complement_836_tsv": "15026c80b25c00db6cc530b8ec03319ddbf0e831887e277764e07f752c3ab572",
+    "gz_points": "44755fe1c15efce59903044f31ffa0c794da8d9e85f330f89d3683e6ae609c0a",
+    "handoff_receipt": "2742a98484466babd0d06e7be1b6ca0a2cedce6b858df99812b34ad6f9f86f2c",
+    "qbasis_library": "be10e2a72679b2214735c1e71f55dfc331e395a41a0866ecde35b090ca21ba85",
+    "reviewed_analyzer": "cd6658b8cdd70aed2a597d24ff2b2c1e16fe9b4807dc204e7e8cf1d6a5ba7132",
+    "solver": "b85cefa08615ff2bffd46690990c68b4d1297de7a8b11046ebd6c1c29bdd8c0b",
+    "solver_source": "f68ecd93e2dee07012d7fda6521fe617775f637fede1da7f3f0cb27a92e6ce73",
+    "source_25_manifest": "baa6f80fd1173165fa36f201c52b6c6f9ec4b1d198ef9169687c5977ffd381e5",
+    "source_25_provenance": "844658183e18445ea49a01e71303782307474072c32b3937a5ebb31058bad322",
+    "source_25_twist_panel": "688132fc91e3decdb83784e71d4a69c9868e1f2ead740d753c2ca7e538b06f4b",
+    "u40_rows": "81f50b31cffa6581b27f52b9aced792b9d6cacbb64950471594693473194a5d9",
+    "u40_summary": "81d45fe4ea75dee1e121dcb22963652c2253cf5e45a61094c3e153f98e4dd5e4",
+    "wedge_861_tsv": "9efc7f43498726d7d1b1119e85bf617b24370aa7b2ff9d5127a85859602ca93e"
+  },
+  "job_names": [
+    "F4CNN861X",
+    "F4CNN861R"
+  ],
+  "materialization_integrity": {
+    "ambiguous_sbatch_result_blocks_refill_instead_of_resubmitting": true,
+    "caught_materialization_failure_removes_new_batch": true,
+    "deterministic_positive_submission_limit_supported": true,
+    "generator_performs_no_submission": true,
+    "handoff_policy_state_and_receipts_exclusive_fsync_mode_0444": true,
+    "handoff_receipt_schema_version": 2,
+    "immutable_chained_handoff_receipts_required_for_launch_and_rebalance": true,
+    "incomplete_materialization_marker_blocks_submission": true,
+    "manifest_byte_sha256_pinned_at_materialization": true,
+    "manifest_semantic_plan_sha256": "368caa133e96fe10b453968fa6f00eab96b0e862d6013b8b79df70212f7cec9e",
+    "materialized_preflight_verifies_both_audit_tool_copies": true,
+    "preflight_program_sha256_pinned": true,
+    "rebalance_policy_inputs_outputs_recomputed_before_heartbeat": true,
+    "rebalance_selection_interleaved_across_physics_cases": true,
+    "repair_submission_ledger_initialized": true,
+    "scheduler_aware_audit_tool_pinned_and_installed": true,
+    "selected_template_bytes_and_rendered_bash_syntax_rechecked_before_sbatch": true,
+    "submission_ledger_records_kind_action_id_and_selection_rank": true,
+    "submit_helper_runs_preflight_before_every_sbatch_call": true,
+    "template_atomically_claimed_before_sbatch": true,
+    "template_content_hash_ledger_required": true,
+    "template_count": 10032,
+    "terminal_receipt_binds_selected_manifest_indices_and_slurm_job_ids": true,
+    "terminal_receipt_records_explicit_allowed_refill_accounts": true
+  },
+  "physics": {
+    "Lx": 4,
+    "Ly": 4,
+    "Ndn": 8,
+    "Nup": 8,
+    "Qm": 0,
+    "Qn": 0,
+    "locate_E0_lanczos_maxit": 10000,
+    "tp": 0
+  },
+  "plan_sha256": "368caa133e96fe10b453968fa6f00eab96b0e862d6013b8b79df70212f7cec9e",
+  "remote_batch": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_861expand_fig4_cnn_20260821",
+  "schema_version": 5,
+  "submission_default": "dry-run",
+  "submission_performed": false,
+  "template_prefix": "job_f4cnn861x_"
+}

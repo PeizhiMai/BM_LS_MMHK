@@ -1,0 +1,205 @@
+{
+  "aggregation": {
+    "diagnostic_estimator": "exchange-symmetry-multiplicity-weighted panel mean",
+    "primary_C_NN_estimator": "unweighted arithmetic mean over deterministic 25-twist maximin panel",
+    "twist_spread_is_not_standard_error": true
+  },
+  "batch": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_25twist_fig4_cnn_20260820",
+  "complete_reused_at_generation": 0,
+  "created_at": "2026-08-20T23:57:01-04:00",
+  "job_name": "F4CNN25",
+  "locate_E0_lanczos_maxit": 10000,
+  "original_qbasis_library": "/home/9pm/installs/lib/libqbasis.so",
+  "original_solver": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/Hubbard_sym_testobs_UV.x",
+  "original_source": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/Hubbard_sym_testobs_UV.cc",
+  "pairs": [
+    {
+      "U": 20,
+      "V": "0",
+      "V_over_U": 0.0
+    },
+    {
+      "U": 20,
+      "V": "2",
+      "V_over_U": 0.1
+    },
+    {
+      "U": 20,
+      "V": "3",
+      "V_over_U": 0.15
+    },
+    {
+      "U": 20,
+      "V": "4",
+      "V_over_U": 0.2
+    },
+    {
+      "U": 20,
+      "V": "4.5",
+      "V_over_U": 0.225
+    },
+    {
+      "U": 40,
+      "V": "6",
+      "V_over_U": 0.15
+    },
+    {
+      "U": 80,
+      "V": "0",
+      "V_over_U": 0.0
+    },
+    {
+      "U": 80,
+      "V": "4",
+      "V_over_U": 0.05
+    },
+    {
+      "U": 80,
+      "V": "8",
+      "V_over_U": 0.1
+    },
+    {
+      "U": 80,
+      "V": "12",
+      "V_over_U": 0.15
+    },
+    {
+      "U": 80,
+      "V": "16",
+      "V_over_U": 0.2
+    },
+    {
+      "U": 80,
+      "V": "18",
+      "V_over_U": 0.225
+    }
+  ],
+  "physics": {
+    "Lx": 4,
+    "Ly": 4,
+    "Ndn": 8,
+    "Nup": 8,
+    "Qm": 0,
+    "Qn": 0,
+    "tp": 0
+  },
+  "pinned_qbasis_library": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_25twist_fig4_cnn_20260820/pinned_solver/libqbasis.so",
+  "pinned_solver": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_25twist_fig4_cnn_20260820/pinned_solver/Hubbard_sym_testobs_UV.x",
+  "pinned_source": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn/fullobs_25twist_fig4_cnn_20260820/pinned_solver/Hubbard_sym_testobs_UV.cc",
+  "qbasis_library_sha256": "be10e2a72679b2214735c1e71f55dfc331e395a41a0866ecde35b090ca21ba85",
+  "resources": {
+    "cpus_per_task": 1,
+    "default_total_user_account_cap": 150,
+    "memory": "100G",
+    "nodes": 1,
+    "partition": "burst",
+    "tasks": 32,
+    "time_limit": "08:00:00"
+  },
+  "solver_sha256": "b85cefa08615ff2bffd46690990c68b4d1297de7a8b11046ebd6c1c29bdd8c0b",
+  "source_sha256": "f68ecd93e2dee07012d7fda6521fe617775f637fede1da7f3f0cb27a92e6ce73",
+  "target_count": 300,
+  "templates_at_generation": 300,
+  "twists": [
+    {
+      "kx": 3,
+      "ky": 3
+    },
+    {
+      "kx": 7,
+      "ky": 7
+    },
+    {
+      "kx": 2,
+      "ky": 8
+    },
+    {
+      "kx": 10,
+      "ky": 12
+    },
+    {
+      "kx": 1,
+      "ky": 14
+    },
+    {
+      "kx": 6,
+      "ky": 16
+    },
+    {
+      "kx": 17,
+      "ky": 17
+    },
+    {
+      "kx": 9,
+      "ky": 21
+    },
+    {
+      "kx": 1,
+      "ky": 23
+    },
+    {
+      "kx": 15,
+      "ky": 23
+    },
+    {
+      "kx": 20,
+      "ky": 25
+    },
+    {
+      "kx": 25,
+      "ky": 25
+    },
+    {
+      "kx": 6,
+      "ky": 26
+    },
+    {
+      "kx": 12,
+      "ky": 29
+    },
+    {
+      "kx": 17,
+      "ky": 29
+    },
+    {
+      "kx": 22,
+      "ky": 30
+    },
+    {
+      "kx": 27,
+      "ky": 30
+    },
+    {
+      "kx": 4,
+      "ky": 32
+    },
+    {
+      "kx": 19,
+      "ky": 34
+    },
+    {
+      "kx": 34,
+      "ky": 34
+    },
+    {
+      "kx": 28,
+      "ky": 35
+    },
+    {
+      "kx": 10,
+      "ky": 36
+    },
+    {
+      "kx": 4,
+      "ky": 38
+    },
+    {
+      "kx": 38,
+      "ky": 38
+    },
+    {
+      "kx": 33,
+      "ky": 39
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "baseline_inventory_file": "known_uint32_inventory.txt",
+  "baseline_inventory_sha256": "261b705ec9ad01e3ef004ecb35b4f893e506c16911aa0a10d345cfad2b3ef625",
+  "baseline_note": "Overinclusive uint32-token inventory frozen before the first three-replica submission; the new seeds are absent from it.",
+  "baseline_unique_uint32": 911248,
+  "derivation_context": "HK_fig4_cnn_U80_V20_f17x17_five_replicas_20260823_parent_authorized",
+  "intersection": [],
+  "live_scan": {
+    "baseline_inventory_sha256": "261b705ec9ad01e3ef004ecb35b4f893e506c16911aa0a10d345cfad2b3ef625",
+    "baseline_unique_uint32": 911248,
+    "exact_numeric_token_occurrences": 0,
+    "live_read_only_scan_root": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn",
+    "live_scan_bytes": 149249704,
+    "live_scan_errors": 0,
+    "live_scan_regular_files": 3901,
+    "scan_completed_before_package_creation": true
+  },
+  "live_scan_note": "A fresh read-only exact-numeric-token scan of every regular non-symlink file in the entire remote fig4_cnn tree found zero occurrences of all five selected seeds before this package path existed. Remote preflight repeats the scan while excluding only its own batch subtree.",
+  "prior_authorized_replica_seeds": [
+    502788135,
+    3887639161,
+    1180146145
+  ],
+  "schema": "fig4_cnn_five_replica_seed_freshness_binding_v1",
+  "selected_fresh_seeds": [
+    436887014,
+    3276620531,
+    3952085789,
+    2430698334,
+    1012333963
+  ],
+  "source_seed": 4064600374
+}

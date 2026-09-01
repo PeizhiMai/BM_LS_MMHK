@@ -1,0 +1,14 @@
+{
+  "intersection": [],
+  "note": "Overinclusive: all uint32-like tokens in reviewed tree; absence is stronger than seed-column-only absence.",
+  "schema": "fig4_cnn_overinclusive_uint32_inventory_binding_v1",
+  "selected_fresh_seeds": [
+    502788135,
+    3887639161,
+    1180146145
+  ],
+  "source_root": "/home/9pm/ED_qbasis/qbasis/bin/ML/HF/fullobs/fig4_cnn",
+  "source_scan_created_before_submission": true,
+  "source_scan_schema": "fig4_cnn_uint32_inventory_v1",
+  "unique_uint32": 911248
+}
